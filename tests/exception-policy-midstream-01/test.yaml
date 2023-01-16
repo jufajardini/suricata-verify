@@ -1,6 +1,6 @@
 args:
 - --simulate-ips
-- --set stream.midstream-policy=pass-flow
+- --set stream.midstream-policy=drop-flow
 
 checks:
   - filter:
