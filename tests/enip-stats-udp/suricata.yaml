@@ -8,7 +8,8 @@ outputs:
       filename: eve.json
       types:
         - flow
-        - stats
+        - stats:
+            decoder.invalid: false
 
 app-layer:
   protocols:
