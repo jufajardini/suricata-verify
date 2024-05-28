@@ -16,40 +16,152 @@ checks:
     match:
       event_type: smb
 - filter:
+    lt-version: 7
     count: 2
     match:
       event_type: alert
       alert.signature_id: 1
 - filter:
+    min-version: 7
     count: 2
     match:
       event_type: alert
       alert.signature_id: 2
 - filter:
+    lt-version: 7
     count: 2
     match:
       event_type: alert
       alert.signature_id: 3
 - filter:
+    lt-version: 7
     count: 2
     match:
       event_type: alert
       alert.signature_id: 4
 - filter:
+    lt-version: 7
     count: 2
     match:
       event_type: alert
       alert.signature_id: 5
 - filter:
+    lt-version: 7
     count: 2
     match:
       event_type: alert
       alert.signature_id: 6
 - filter:
+    lt-version: 7
     count: 2
     match:
       event_type: alert
       alert.signature_id: 7
+# min-version: 7
+- filter:
+    min-version: 7
+    count: 4
+    match:
+      event_type: alert
+      alert.signature_id: 1
+- filter:
+    min-version: 7
+    count: 4
+    match:
+      event_type: alert
+      alert.signature_id: 2
+- filter:
+    min-version: 7
+    count: 4
+    match:
+      event_type: alert
+      alert.signature_id: 3
+- filter:
+    min-version: 7
+    count: 4
+    match:
+      event_type: alert
+      alert.signature_id: 4
+- filter:
+    min-version: 7
+    count: 4
+    match:
+      event_type: alert
+      alert.signature_id: 5
+- filter:
+    min-version: 7
+    count: 4
+    match:
+      event_type: alert
+      alert.signature_id: 6
+- filter:
+    min-version: 7
+    count: 4
+    match:
+      event_type: alert
+      alert.signature_id: 7
+# Using `tcp-stream` gets rid of the "duplicated" alerts, as the same traffic
+# portion won't be evaluated twice by two different parts of the detect engine
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 11
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 11
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 11
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 11
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 22
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 33
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 44
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 55
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 66
+- filter:
+    min-version: 7
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 77
 - filter:
     count: 11
     match:

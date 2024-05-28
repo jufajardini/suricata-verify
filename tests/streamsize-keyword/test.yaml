@@ -6,7 +6,14 @@ args:
 
 checks:
   - filter:
-      count: 1
+      count: 2
       match:
         event_type: alert
         alert.signature_id: 1234
+# Using `tcp-stream` gets rid of the "duplicated" alert, as the same traffic
+# portion won't be evaluated twice by two different parts of the detect engine
+  - filter:
+      count: 1
+      match:
+        event_type: alert
+        alert.signature_id: 12345

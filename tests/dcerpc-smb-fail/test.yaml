@@ -18,10 +18,17 @@ checks:
     match:
       event_type: dns
 - filter:
-    count: 2
+    count: 4
     match:
       event_type: alert
       alert.signature_id: 1
+# Using `tcp-stream` gets rid of the "duplicated" alert, as the same traffic
+# portion won't be evaluated twice by two different parts of the detect engine
+- filter:
+    count: 2
+    match:
+      event_type: alert
+      alert.signature_id: 11
 - filter:
     count: 2
     match:
