@@ -26,6 +26,7 @@ outputs:
             totals: yes
             threads: no
             deltas: no
+            app_layer.error.exception_policy.drop_packet: false
         - flow
   - stats:
       enabled: yes

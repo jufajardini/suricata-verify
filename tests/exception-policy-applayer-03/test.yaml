@@ -70,4 +70,4 @@ checks:
     match:
       event_type: stats
       stats.app_layer.error.exception_policy.pass_packet: 1
-      stats.app_layer.error.exception_policy.drop_packet: 0
+      not-has-key: stats.app_layer.error.exception_policy.drop_packet
