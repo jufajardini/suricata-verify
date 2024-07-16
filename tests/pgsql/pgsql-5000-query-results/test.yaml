@@ -107,7 +107,7 @@ checks:
       src_ip: 172.18.0.1
       src_port: 54408
       event_type: pgsql
-      pcap_cnt: 782
+      pcap_cnt: 785
       pgsql.request.message: termination_message
       pgsql.tx_id: 5
       proto: TCP
