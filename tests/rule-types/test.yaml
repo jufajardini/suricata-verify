@@ -172,3 +172,27 @@ checks:
       match:
         id: 304
         type: "like_ip_only"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 305
+        type: "like_ip_only"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 604
+        type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 605
+        type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 606
+        type: "pkt"
