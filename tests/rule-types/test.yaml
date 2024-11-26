@@ -196,3 +196,33 @@ checks:
       match:
         id: 606
         type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 607
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 608
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 609
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 403
+        type: "pd_only"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 404
+        type: "app_layer"

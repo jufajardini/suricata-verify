@@ -14,6 +14,8 @@ alert tcp [10.0.0.0/8,!10.10.10.10] any -> [10.0.0.0/8,!10.10.10.10] any (msg:"t
 
 alert tcp any any -> any any (msg:"tcp, pd negated"; app-layer-protocol:!http; sid:401;)
 alert tcp any any -> any any (msg:"tcp, pd positive"; app-layer-protocol:http; sid:402;)
+alert tcp any any -> any any (msg:"tcp, pd positive dns"; app-layer-protocol:dns; sid:403;)
+alert dns any any -> any any (msg:"app-layer, dns"; sid:404;)
 
 alert tcp any any -> any any (msg:"http, pos event"; app-layer-event:http.file_name_too_long; sid:501;)
 #alert tcp any any -> any any (msg:"http, neg event"; app-layer-event:!http.file_name_too_long; sid:502;)
@@ -22,10 +24,13 @@ alert tcp any any -> any any (msg:"http, pos event"; app-layer-event:http.file_n
 
 alert http any any -> any any (msg:"http, no content"; sid:601;)
 alert http any any -> any any (msg:"http, simple content"; content:"abc"; sid:602;)
-alert http any any -> any any (msg:"http, anchored content"; content:"abc"; startswith; sid:603;)
+alert http any any -> any any (msg:"http, anchored content"; content:"abc"; depth:30; sid:603;)
 alert tls any any -> any any (msg:"tls, pkt or app-layer? alert"; sid:604;)
 pass tls any any -> any any (msg:"tls, pkt or app-layer? pass"; sid:605;)
 pass tls any any -> any any (msg:"tls, pkt or app-layer? flow:established"; flow:established; sid:606;)
+alert tls any any -> any any (msg:"tls, pkt or app-layer? flow:established"; flow:established; sid:607;)
+alert tls any any -> any any (msg:"tls, pkt or app-layer? flow:not_established"; flow:not_established; sid:608;)
+alert tls any any -> any any (msg:"tls, pkt or app-layer? flow:stateless"; flow:stateless; sid:609;)
 
 alert tcp any any -> any any (msg:"ttl"; ttl:123; sid:701;)
 alert tcp any any -> any any (msg:"ttl"; ttl:123; flow:established; sid:702;)
