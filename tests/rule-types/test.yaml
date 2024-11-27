@@ -20,6 +20,12 @@ checks:
       filename: rules.json
       count: 1
       match:
+        id: 103
+        type: "stream"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
         id: 201
         type: "ip_only"
   - filter:
@@ -56,6 +62,18 @@ checks:
       filename: rules.json
       count: 1
       match:
+        id: 304
+        type: "like_ip_only"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 305
+        type: "like_ip_only"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
         id: 401
         type: "pd_only"
   - filter:
@@ -64,6 +82,18 @@ checks:
       match:
         id: 402
         type: "pd_only"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 403
+        type: "pd_only"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 404
+        type: "app_layer"
   - filter:
       filename: rules.json
       count: 1
@@ -88,6 +118,78 @@ checks:
       match:
         id: 603
         type: "pkt_stream"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 604
+        type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 605
+        type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 606
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 607
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 608
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 609
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 610
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 611
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 612
+        type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 613
+        type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 614
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 615
+        type: "pkt"
   - filter:
       filename: rules.json
       count: 1
@@ -262,6 +364,48 @@ checks:
       match:
         id: 404
         type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1201
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1202
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1301
+        type: "app_tx"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1302
+        type: "app_tx"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1303
+        type: "app_tx"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1401
+        type: "app_tx"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1402
+        type: "app_tx"
   - filter:
       filename: rules.json
       count: 1
