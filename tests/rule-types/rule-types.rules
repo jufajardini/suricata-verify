@@ -67,11 +67,11 @@ alert http1 any any -> any any (flow:to_server; frame:request; strip_whitespace;
 alert tcp any any -> any any (msg:"DNS UDP Frame"; flow:to_server; frame:dns.pdu; content:"|01 20 00 01|"; offset:2; content:"suricata"; offset:13; sid:1401; rev:1;)
 alert udp any any -> any any (msg:"DNS UDP Frame"; flow:to_server; frame:dns.pdu; content:"|01 20 00 01|"; offset:2; content:"suricata"; offset:13; sid:1402; rev:1;)
 
-drop http any any -> any any (msg:"Block 206 response for IPPair"; content:"206"; http_stat_code; xbits:isset, blocked_http, track ip_pair; priority:1; sid:1503;)
-alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"tls xbits:set";xbits:set,ipcheck,track ip_src; sid:1504;)
-alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"tls xbits:set"; flow:established,to_server; tls.sni; content:"myexternalip.com"; endswith; nocase; xbits:set,ET.ipcheck,track ip_src; reference:md5,4c24760ed6e163caf0cff96177475ab6; classtype:policy-violation; sid:150402;)
-alert ip any any -> any any (msg:"isset option"; hostbits:isset,fbt; content:"GET "; sid:1505;)
-alert ip any any -> any any (hostbits:set,myflow2; sid:1506;)
-alert dns any any -> any any (dns.query; dataset: isnotset, dns-seen, type string; sid:1507;)
-alert dns any any -> any any (dns.query; dataset:set,dns-seen, type string; sid:1508;)
+drop http any any -> any any (msg:"Block 206 response for IPPair"; content:"206"; http_stat_code; xbits:isset, blocked_http, track ip_pair; priority:1; sid:1501;)
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"tls xbits:set";xbits:set,ipcheck,track ip_src; sid:1502;)
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"tls xbits:set"; flow:established,to_server; tls.sni; content:"myexternalip.com"; endswith; nocase; xbits:set,ET.ipcheck,track ip_src; reference:md5,4c24760ed6e163caf0cff96177475ab6; classtype:policy-violation; sid:1503;)
+alert ip any any -> any any (msg:"isset option"; hostbits:isset,fbt; content:"GET "; sid:1504;)
+alert ip any any -> any any (hostbits:set,myflow2; sid:1505;)
+alert dns any any -> any any (dns.query; dataset: isnotset, dns-seen, type string; sid:1506;)
+alert dns any any -> any any (dns.query; dataset:set,dns-seen, type string; sid:1507;)
 
