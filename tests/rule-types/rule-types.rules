@@ -31,6 +31,8 @@ pass tls any any -> any any (msg:"tls, pkt or app-layer? flow:established"; flow
 alert tls any any -> any any (msg:"tls, pkt or app-layer? flow:established"; flow:established; sid:607;)
 alert tls any any -> any any (msg:"tls, pkt or app-layer? flow:not_established"; flow:not_established; sid:608;)
 alert tls any any -> any any (msg:"tls, pkt or app-layer? flow:stateless"; flow:stateless; sid:609;)
+alert tls any any -> any any (msg:"tls, pkt or app-layer? flowbits:isset,tls_error"; sid:610;)
+alert tls any any -> any any (msg:"tls, pkt or app-layer? flowbits:set,tls_error"; sid:611;)
 
 alert tcp any any -> any any (msg:"ttl"; ttl:123; sid:701;)
 alert tcp any any -> any any (msg:"ttl"; ttl:123; flow:established; sid:702;)

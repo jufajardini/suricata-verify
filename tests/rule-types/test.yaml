@@ -218,6 +218,18 @@ checks:
       filename: rules.json
       count: 1
       match:
+        id: 610
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 611
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
         id: 403
         type: "pd_only"
   - filter:
