@@ -230,6 +230,30 @@ checks:
       filename: rules.json
       count: 1
       match:
+        id: 612
+        type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 613
+        type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 614
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 615
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
         id: 403
         type: "pd_only"
   - filter:
@@ -238,3 +262,57 @@ checks:
       match:
         id: 404
         type: "app_layer"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1500
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1501
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1502
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1503
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1504
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1505
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1506
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1507
+        type: "pkt"
+  - filter:
+      filename: rules.json
+      count: 1
+      match:
+        id: 1508
+        type: "pkt"
