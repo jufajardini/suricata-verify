@@ -1,6 +1,12 @@
 %YAML 1.1
 ---
 
+decoder:
+  ipv4:
+    ipip:
+      enabled: true
+      parent_flow: true
+
 stats:
   enabled: yes
   interval: 8
