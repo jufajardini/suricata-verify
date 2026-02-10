@@ -1,6 +1,7 @@
 requires:
+  min-version: 9
   features:
-    - DEBUG
+    - SIMULATION
 pcap: ../tls/tls-certs-alert/input.pcap
 args:
 - --simulate-ips
