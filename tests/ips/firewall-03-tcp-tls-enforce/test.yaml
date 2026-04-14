@@ -24,8 +24,7 @@ checks:
 - filter:
     requires:
       min-version: 9
-      count: 1
-      match:
-        event_type: stats
-        not-has-key: stats.ips.drop_reason.firewall
-        not-has-key: stats.detect.firewall
+    count: 1
+    match:
+      event_type: stats
+      not-has-key: stats.firewall
